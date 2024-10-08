@@ -1,8 +1,7 @@
 # Extracts all pages in a PDF and convert them to JPEG.
 # You might need to run "pip install pymupdf pillow" if they're not already installed.
 
-
-import fitz  # PyMuPDF
+import fitz
 from PIL import Image
 import io
 import tkinter as tk
@@ -11,7 +10,6 @@ from tkinter import filedialog, messagebox
 def pdf_to_jpeg(pdf_path, output_folder):
     pdf_document = fitz.open(pdf_path)
     
-    # Loop through each page
     for page_num in range(pdf_document.page_count):
         page = pdf_document.load_page(page_num)
 
